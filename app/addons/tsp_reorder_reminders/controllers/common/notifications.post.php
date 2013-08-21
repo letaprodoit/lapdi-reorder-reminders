@@ -37,6 +37,9 @@ if ($mode == 'cron')
 	$active_reminders = db_get_hash_array("SELECT * FROM ?:addon_tsp_reorder_reminders WHERE `status` = 'O'",'id');
 	$notifications_sent = 0;
 	
+	$now_timestamp = time();
+	$now = fn_date_format($now_timestamp, Registry::get('settings.Appearance.date_format'));
+
 	foreach ( $active_reminders as $id => $reminder )
 	{
 		extract($reminder);
@@ -72,9 +75,6 @@ if ($mode == 'cron')
 							// only send additional reminders if the number sent already is less than the max reminders to send
 							if ( (int)$reminders_sent < (int)$max_reminders )
 							{
-								$now_timestamp = time();
-								$now = fn_date_format($now_timestamp, Registry::get('settings.Appearance.date_format'));
-								
 								$reminder_created_timestamp = $date_created;
 								$reminder_created = fn_date_format($reminder_created_timestamp, Registry::get('settings.Appearance.date_format'));
 								
@@ -150,9 +150,11 @@ if ($mode == 'cron')
 		}//end if
 	}//end foreach
 	
-	fn_echo(__('tspror_reminders_sent', array(
-	'[count]' => $notifications_sent
-	)));
+    fn_log_event('requests', 'http' array(
+    	'date' => $now,
+        'message' => __('tspror_reminders') . __('sent') . ": $notifications_sent".PHP_EOL.
+        			__('tspror_reminders') . __('open') . ": ".count($active_reminders),
+    ));
 	
 	exit;
 }//end if	
