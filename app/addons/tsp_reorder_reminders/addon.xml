@@ -21,6 +21,7 @@
         <item lang="en" id="tspror_reminder_default">Default Reminder Choice</item>      
         <item lang="en" id="tspror_reminder_editing">Editing Reminder</item>    
         <item lang="en" id="tspror_reminder_expire">The maximum number of times to notify the user of re-order?</item>    
+        <item lang="en" id="tspror_reminder_in">Remind Me In?</item>      
         <item lang="en" id="tspror_reminder_interval">Send reminder notifications every?</item>    
         <item lang="en" id="tspror_reminder_reordered">Reordered On</item>    
         <item lang="en" id="tspror_reminder_sent">Total Sent</item>      

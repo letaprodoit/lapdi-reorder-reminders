@@ -87,9 +87,9 @@ if ($mode == 'manage')
 }//endif
 elseif ($mode == 'update' && !empty($_REQUEST['reminder_id'])) 
 {
-	$id 					= $_REQUEST['reminder_id'];	
-	list($reminders, $null)	= fn_tspror_get_reminders($_REQUEST,0,true,true,true); //will only return one
-	$reminder 				= $reminders[$id];
+	$id 						= $_REQUEST['reminder_id'];	
+	list($reminders, $search)	= fn_tspror_get_reminders($_REQUEST,0,true,true,true); //will only return one
+	$reminder 					= $reminders[$id];
 	
 	if (empty($reminder)) 
 	{
@@ -103,7 +103,8 @@ elseif ($mode == 'update' && !empty($_REQUEST['reminder_id']))
 	
 	Registry::get('view')->assign('reminder_statuses', Registry::get('tspror_reminder_statuses_short'));
 	Registry::get('view')->assign('reminder', $reminder);
-
+	Registry::get('view')->assign('search', $search);
+	
 }//endelseif
 elseif ($mode == 'update_status' && !empty($_REQUEST['id'])) 
 {
