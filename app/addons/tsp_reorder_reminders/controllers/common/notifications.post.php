@@ -150,7 +150,7 @@ if ($mode == 'cron')
 		}//end if
 	}//end foreach
 	
-    fn_log_event('requests', 'http' array(
+    fn_log_event('requests', 'http', array(
     	'date' => $now,
         'message' => __('tspror_reminders') . __('sent') . ": $notifications_sent".PHP_EOL.
         			__('tspror_reminders') . __('open') . ": ".count($active_reminders),
