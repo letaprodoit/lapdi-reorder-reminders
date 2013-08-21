@@ -17,13 +17,14 @@ For up-to-date installation and setup notes, visit the FAQ:
 
 * Download from repository
 * Unzip the zip file in the directory where CS-Cart runs
-* If the zip creates a new directory called `tsp-appointments` you will need to run the install script, else you are done
+* If the zip creates a new directory called `tsp-reorder-reminders` you will need to run the install script, else you are done
 * If `tsp-reorder-reminders` folder created by zip, Navigate to the folder. Update the $target_loc in the install.php and run its. Command: php install.php
 * Open CS-Cart Administration Control Panel
 * Navigate to Addons -> Manage Addons
 * Find the "The Software People: Re-Order Reminders" addon and click "Install" (If you don't see it make sure "All Stores" is selected at the top of the screen)
 * After Install, from the Addons listing click on Settings for "The Software People: Re-Order Reminders"
-* Update The Appointment settings
+* Update The Re-Order Reminder settings
+* Add a Store (new since 4.x) to each Option by editing each one of the options below in Products -> Options
 
 ## USING THE ADDON
 
@@ -31,31 +32,42 @@ The Re-Order Reminders module, upon install, adds product global options to the 
 
 The Products->Global Options that are added include:
 
-* Reorder?
-* Remind Me
+* Remind Me to Re-Order In?
 
 Each product has settings that can be turned on if the admin wishes to sell a product that requires reorder. 
 
 The Product Listing -> Addon tab includes:
 
-* Product Can be Reordered?
-* Reminder Interval
-* Expire Reminder after how many email notifications?
+* Default Reminder Choice
 
 ### Creating a Product with Reminders
 
 In order to create a product that has reminders you will need to perform the following steps:
 
 * Create the product and save (after save the Addons tab will be available to you.
+* Navigate to the Options tab and add the Global options below to the product by clicking on "Add Global Option"  (Apply as Link).
+** Add `Remind Me to Re-Order In?`.
 * Navigate to the Addons tab and scroll to the section "The Software People: Re-Order Reminders".
-* Supply the reminders details.
+* Enter in the default reminder interval for the product (ie Memberships default '1 Year', Products default example '3 Months')
 * Save and close the product
 * And thats it! Now you can allow your customers to purchase events.
+* Note: Any variants changed for the Global option `Remind Me to Re-Order In?` will also show in the product's Addon `Default Reminder Choice` dropdown
+
+### Creating a Cron Job to Send Reminders
+
+After you have setup reminders on your products you will need to create a cron on your server to run the script.
+Note you will need to copy your Store Access Key from Settings > Security Settings > Cron Password
+
+The cron to run is: `http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS >/dev/null 2>&1`
+Recommended run time is `Every Day at 8:00 Hrs`
+Sample Cron:
+  0 8 * * * http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS >/dev/null 2>&1
+
 
 
 ## REPORTING ISSUES
 
-Thank you for downloading Appointments for CS-Cart
+Thank you for downloading Re-Order Reminder for CS-Cart
 If you find any issues, please report them in the issue tracker on our website:
 [http://lab.thesoftwarepeople.com/tracker/cscart-ror](http://lab.thesoftwarepeople.com/tracker/cscart-ror)
 

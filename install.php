@@ -34,12 +34,8 @@ else
 	shell_exec( " cp -R -v -a $source_loc/$addon_dir/$addon_name $target_loc/$addon_dir/ " );
 
 	// Copy files from theme backend directory to the target backend directory
+	shell_exec( " cp -R -v -a $source_loc/$theme_backend_dir/css/addons/$addon_name $target_loc/$theme_backend_dir/css/addons/ " );
+	shell_exec( " cp -R -v -a $source_loc/$theme_backend_dir/media/addons/$addon_name $target_loc/$theme_backend_dir/media/addons/ " );
 	shell_exec( " cp -R -v -a $source_loc/$theme_backend_dir/templates/addons/$addon_name $target_loc/$theme_backend_dir/templates/addons/ " );
-
-	// Copy files from theme frontend directory to the target frontend directory
-	shell_exec( " cp -R -v -a $source_loc/$theme_frontend_dir/templates/addons/$addon_name $target_loc/$theme_frontend_dir/templates/addons/ " );
-
-	// Copy files from theme frontend directory to the target var/ directory
-	shell_exec( " cp -R -v -a $source_loc/$theme_var_dir/templates/addons/$addon_name $target_loc/$theme_var_dir/templates/addons/ " );
 }//end else
 ?>
