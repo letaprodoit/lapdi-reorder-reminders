@@ -68,7 +68,10 @@ Recommended run time:
 Sample Cron:
   0 8 * * * wget -q -O /dev/null http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS
 
-
+### Creating Cron Jobs from the Command Line
+* List Crons `crontab -l`
+* Edit Crons `crontab -e`
+* Delete Crons `crontab -r`
 
 ## REPORTING ISSUES
 
