@@ -58,10 +58,15 @@ In order to create a product that has reminders you will need to perform the fol
 After you have setup reminders on your products you will need to create a cron on your server to run the script.
 Note you will need to copy your Store Access Key from Settings > Security Settings > Cron Password
 
-The cron to run is: `http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS >/dev/null 2>&1`
-Recommended run time is `Every Day at 8:00 Hrs`
+The cron to run is:
+  wget -q -O /dev/null http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS
+  
+Recommended run time:
+
+  Every Day at 8:00 Hrs
+
 Sample Cron:
-  0 8 * * * http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS >/dev/null 2>&1
+  0 8 * * * wget -q -O /dev/null http://www.yourstore.com/index.php?dispatch=notifications.cron&cron_password=YOURCRONPASS
 
 
 

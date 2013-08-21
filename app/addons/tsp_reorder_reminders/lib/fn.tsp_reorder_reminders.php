@@ -40,6 +40,7 @@ function fn_tspror_uninstall_languages ()
 		'tspror_reminder_date',
 		'tspror_reminder_default',
 		'tspror_reminder_expire',
+		'tspror_reminder_in',
 		'tspror_reminder_interval',
 		'tspror_reminder_sent',
 		'tspror_notification',
@@ -556,7 +557,9 @@ function fn_tspror_get_reminders($params, $items_per_page = 0, $store_user = fal
 				// if this product's option is the reminder then get its data
 				if ($option_id == Registry::get('tspror_product_option_reminder_field_id'))
 				{
-					list($null, $reminders[$id]['remind_in']) = fn_tspror_get_product_option_info($option_id,$value);
+					list($null, $reminders[$id]['remind_in']) 	= fn_tspror_get_product_option_info($option_id,$value);
+					$date_to_remind_timestamp 					= strtotime($reminders[$id]['remind_in'], $reminders[$id]['date_created']);
+					$reminders[$id]['remind_date'] 				= $date_to_remind_timestamp;
 				}//end if
 			}//endforeach
 		}//end if
