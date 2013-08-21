@@ -11,12 +11,13 @@
  * @brief		Admin post permissions for menus
  * 
  */
+$schema = array();
 
-/*$schema['reminders'] = array (
+$schema['reminders'] = array (
 	'permissions' => 'manage_reminders',
 );
 $schema['tools']['modes']['update_status']['param_permissions']['table_names']['addon_tsp_reorder_reminders'] = 'manage_reminders';
-*/
+
 
 return $schema;
 
