@@ -9,30 +9,33 @@
         <include name="${name}/*" />
         <include name="${name}/controllers/*" />
         <include name="${name}/controllers/backend/*" />
+        <include name="${name}/controllers/common/*" />
         <include name="${name}/controllers/frontend/*" />
         <include name="${name}/lib/*" />
+        <include name="${name}/schemas/*" />
+        <include name="${name}/schemas/menu/*" />
+        <include name="${name}/schemas/permissions/*" />
     </fileset>
 
     <!-- Fileset for backend files -->
     <fileset dir="${project.basedir}/design/backend" id="backend_files">
+        <include name="css/addons/${name}/*" />
+        <include name="mail/templates/addons/${name}/*" />
+        <include name="media/images/addons/${name}/*" />
+        <include name="media/images/addons/${name}/icons/*" />
+        <include name="media/images/addons/${name}/icons/menu/*" />
         <include name="templates/addons/${name}/*" />
+        <include name="templates/addons/${name}/hooks/*" />
         <include name="templates/addons/${name}/hooks/index/*" />
         <include name="templates/addons/${name}/hooks/products/*" />
         <include name="templates/addons/${name}/views/*" />
-        <include name="templates/addons/${name}/views/${name}/*" />
-        <include name="templates/addons/${name}/views/${name}/components/*" />
+        <include name="templates/addons/${name}/views/reminders/*" />
+        <include name="templates/addons/${name}/views/reminders/components/*" />
     </fileset>
 
     <!-- Fileset for frontend files -->
     <fileset dir="${project.basedir}/design/themes" id="frontend_files">
-        <include name="basic/templates/addons/${name}/*" />
-        <include name="basic/templates/addons/${name}/hooks/*" />
-        <include name="basic/templates/addons/${name}/hooks/index/*" />
-        <include name="basic/templates/addons/${name}/hooks/products/*" />
-        <include name="basic/templates/addons/${name}/views/*" />
-        <include name="basic/templates/addons/${name}/views/${name}/*" />
-        <include name="basic/templates/addons/${name}/views/${name}/components/*" />
-    </fileset>
+   </fileset>
 
 
     <!-- Fileset for all files -->
@@ -41,43 +44,30 @@
         <include name="app/addons/${name}/*" />
         <include name="app/addons/${name}/controllers/*" />
         <include name="app/addons/${name}/controllers/backend/*" />
+        <include name="app/addons/${name}/controllers/common/*" />
         <include name="app/addons/${name}/controllers/frontend/*" />
         <include name="app/addons/${name}/lib/*" />
-    	
+        <include name="app/addons/${name}/schemas/*" />
+        <include name="app/addons/${name}/schemas/menu/*" />
+        <include name="app/addons/${name}/schemas/permissions/*" />
+        
+        <include name="design/backend/css/addons/${name}/*" />
+        <include name="design/backend/mail/templates/addons/${name}/*" />
+        <include name="design/backend/media/images/addons/${name}/*" />
+        <include name="design/backend/media/images/addons/${name}/icons/*" />
+        <include name="design/backend/media/images/addons/${name}/icons/menu/*" />
         <include name="design/backend/templates/addons/${name}/*" />
         <include name="design/backend/templates/addons/${name}/hooks/*" />
         <include name="design/backend/templates/addons/${name}/hooks/index/*" />
         <include name="design/backend/templates/addons/${name}/hooks/products/*" />
         <include name="design/backend/templates/addons/${name}/views/*" />
-        <include name="design/backend/templates/addons/${name}/views/${name}/*" />
-        <include name="design/backend/templates/addons/${name}/views/${name}/components/*" />
-    	
-        <include name="design/themes/basic/templates/addons/${name}/*" />
-        <include name="design/themes/basic/templates/addons/${name}/hooks/*" />
-        <include name="design/themes/basic/templates/addons/${name}/hooks/index/*" />
-        <include name="design/themes/basic/templates/addons/${name}/hooks/products/*" />
-        <include name="design/themes/basic/templates/addons/${name}/views/*" />
-        <include name="design/themes/basic/templates/addons/${name}/views/${name}/*" />
-        <include name="design/themes/basic/templates/addons/${name}/views/${name}/components/*" />
-   	
-        <include name="var/themes_repository/basic/templates/addons/${name}/*" />
-        <include name="var/themes_repository/basic/templates/addons/${name}/hooks/*" />
-        <include name="var/themes_repository/basic/templates/addons/${name}/hooks/index/*" />
-        <include name="var/themes_repository/basic/templates/addons/${name}/hooks/products/*" />
-        <include name="var/themes_repository/basic/templates/addons/${name}/views/*" />
-        <include name="var/themes_repository/basic/templates/addons/${name}/views/${name}/*" />
-        <include name="var/themes_repository/basic/templates/addons/${name}/views/${name}/components/*" />
+        <include name="design/backend/templates/addons/${name}/views/reminders/*" />
+        <include name="design/backend/templates/addons/${name}/views/reminders/components/*" />
     </fileset>
 
     <!-- copy_all Target -->
     <target name="copy_all" description="copy all files target">
-        <!-- Copying FRONTENT to VAR -->
-        <echo message="Copying FRONTEND to VAR..." />
-        <copy todir="${project.basedir}/var/themes_repository">
-            <fileset refid="frontend_files" />
-        </copy>
-
-    	<!-- Copying to TEST project -->
+        <!-- Copying to TEST project -->
         <echo message="Copying ADDON files to TEST project..." />
         <copy todir="${test_site}/app/addons">
             <fileset refid="addonfiles" />
@@ -86,15 +76,7 @@
         <copy todir="${test_site}/design/backend">
             <fileset refid="backend_files" />
         </copy>
-        <echo message="Copying FRONTEND files to TEST project..." />
-        <copy todir="${test_site}/design/themes">
-            <fileset refid="frontend_files" />
-        </copy>
-        <echo message="Copying FRONTEND files to var/ dir of TEST project..." />
-        <copy todir="${test_site}/var/themes_repository">
-            <fileset refid="frontend_files" />
-        </copy>
-    	
+        
         <!-- Copying to LIVE project -->
         <echo message="Copying ADDON files to LIVE project..." />
         <copy todir="${live_site}/app/addons">
@@ -104,16 +86,8 @@
         <copy todir="${live_site}/design/backend">
             <fileset refid="backend_files" />
         </copy>
-        <echo message="Copying FRONTEND files to LIVE project..." />
-        <copy todir="${live_site}/design/themes">
-            <fileset refid="frontend_files" />
-        </copy>
-        <echo message="Copying FRONTEND files to var/ dir of LIVE project..." />
-        <copy todir="${live_site}/var/themes_repository">
-            <fileset refid="frontend_files" />
-        </copy>
-    	
-        <!-- Creating ZIP file -->
+ 
+    	<!-- Creating ZIP file -->
         <delete file="../../${name}_4x.zip" />
         <zip destfile="../../${name}_4x.zip">
             <fileset refid="allfiles" />

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>tsp_reorder_reminders</id>
+    <name>The Software People - Re-Order Reminders</name>
+    <description>The Software People (TSP) Reorder Reminders for CS-Cart allows users to be reminded when it is time to re-order a product. For more details visit us online at www.thesoftwarepeople.com</description>
+    <version>1.0.0</version>
+    <priority>1111000001</priority>
+    <position>0</position>
+    <status>active</status>
+    <default_language>en</default_language>
+    <language_variables>
+        <item lang="en" id="tsp_reorder_reminders">The Software People: Re-Order Reminders</item> 
+        <item lang="en" id="tspror_details">Reminder Details</item>    
+        <item lang="en" id="tspror_reminders">Re-Order Reminders</item>    
+        <item lang="en" id="tspror_reminders_menu_description">List of reorder reminders requested by your customers.</item>
+        <item lang="en" id="tspror_reminder">Remind Me to Re-Order In?</item>      
+        <item lang="en" id="tspror_reminder_comment">When would you like to be notified to re-order?</item>    
+        <item lang="en" id="tspror_reminder_completed">Completed</item>      
+        <item lang="en" id="tspror_reminder_created">Created On</item>      
+        <item lang="en" id="tspror_reminder_date">Reminded On</item>    
+        <item lang="en" id="tspror_reminder_default">Default Reminder Choice</item>      
+        <item lang="en" id="tspror_reminder_editing">Editing Reminder</item>    
+        <item lang="en" id="tspror_reminder_expire">The maximum number of times to notify the user of re-order?</item>    
+        <item lang="en" id="tspror_reminder_interval">Send reminder notifications every?</item>    
+        <item lang="en" id="tspror_reminder_reordered">Reordered On</item>    
+        <item lang="en" id="tspror_reminder_sent">Total Sent</item>      
+        <item lang="en" id="tspror_reminder_status">Reminder Status</item>      
+        <item lang="en" id="tspror_notification">Re-Order Notification for [product_name]</item>
+        <item lang="en" id="tspror_notification_msg">Per your request, we are informing you that it is now [reminder_interval] since your last order and it is now time to re-order [product_name]. To re-order this item visit Order #[order_url] and click on '[reorder_this_order]'</item>
+        <item lang="en" id="tspror_title">Re-Order Reminders</item>    
+    </language_variables>
+    <tab_order>prepend</tab_order>
+    <settings>
+        <sections>
+            <section id="Settings">
+                <!-- Tab name in the default language -->
+                <name>Basic Settings</name>     
+                <translations>
+                    <item lang="ES" for="name">Basic Settings</item>
+                    <item lang="FR" for="name">Basic Settings</item>
+                </translations>
+                <items>
+                    <item id="delete_reminder_data">
+                        <name>Delete Reminder Data on Uninstall</name>
+                        <type>selectbox</type>
+                        <default_value>N</default_value>
+                        <variants>
+                            <item id="N">
+                                <name>No</name>
+                            </item>
+                            <item id="Y">
+                                <name>Yes</name>
+                            </item>
+                        </variants>
+                    </item>
+                    <item id="max_reminders">
+                        <name>The maximum number of times to notify the user of re-order?</name>
+                        <type>input</type>
+                        <default_value>3</default_value>
+                    </item>
+                    <item id="time_between_reminders">
+                        <name>Send reminder notifications every?</name>
+                        <type>selectbox</type>
+                        <default_value>2 Weeks</default_value>
+                        <variants>
+                            <item id="1 Week">
+                                <name>1 Week</name>
+                            </item>
+                            <item id="2 Weeks">
+                                <name>2 Weeks</name>
+                            </item>
+                        </variants>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+    <queries>
+        <!-- If parameter "for" equals "install" or is not set, the query is executed during the add-on installation -->
+        <!-- If the "editions" attribute is given, the request will be executed only for the editions that are defined in it (separated with commas) -->
+        <item for="install">
+            CREATE TABLE `?:addon_tsp_reorder_reminders` (
+                    `id` mediumint(8) NOT NULL AUTO_INCREMENT,
+                    `status` char(1) NOT NULL DEFAULT 'O',
+                    `company_id` mediumint(8) NOT NULL,
+                    `order_id` mediumint(8) NOT NULL,
+                    `product_id` mediumint(8) NOT NULL,
+                    `user_id` mediumint(8) NOT NULL,
+                    `reminders_sent` mediumint(8) NOT NULL DEFAULT '0',
+                    `date_created` int(11) NOT NULL,
+                    `date_reminded` int(11) NOT NULL DEFAULT '0',
+                    `date_reordered` int(11) NOT NULL DEFAULT '0',
+                    `date_completed` int(11) NOT NULL DEFAULT '0',
+                PRIMARY KEY (`id`)
+            ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+        </item>
+        <item for="install">
+            CREATE TABLE `?:addon_tsp_reorder_reminders_product_metadata`    (
+                    `product_id` mediumint(8) NOT NULL,
+                    `field_name` varchar(255) NOT NULL,
+                    `value` text NOT NULL,
+                PRIMARY KEY (`product_id`,`field_name`)
+            ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+        </item>
+        <item for="install">
+            CREATE TABLE `?:addon_tsp_reorder_reminders_product_field_metadata` (
+                `id` mediumint NOT NULL auto_increment,
+                `key` varchar(255) NOT NULL,
+                `option_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+                `variant_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+                PRIMARY KEY  (`id`)
+            ) ENGINE=MyISAM DEFAULT CHARSET=UTF8
+        </item>
+    </queries>
+    <functions>
+        <item for="install">fn_tspror_install_product_fields</item>
+        <item for="uninstall">fn_tspror_uninstall_product_metadata</item>
+        <item for="uninstall">fn_tspror_uninstall_product_field_metadata</item>
+        <item for="uninstall">fn_tspror_uninstall_languages</item>
+        <item for="uninstall">fn_tspror_uninstall_main</item>
+    </functions>
+</addon>
