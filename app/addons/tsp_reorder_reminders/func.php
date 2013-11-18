@@ -4,7 +4,7 @@
  *
  * @package		TSP Re-Order Reminders for CS-Cart
  * @filename	func.php
- * @version		1.0.0
+ * @version		1.0.1
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -28,7 +28,7 @@ require_once 'lib/fn.tsp_reorder_reminders.php';
 /**
  * Change order status
  *
- * @since 2.0.0
+ * @since 1.0.0
  *
  * @param string $status_to New order status (one char)
  * @param string $status_from Old order status (one char)
