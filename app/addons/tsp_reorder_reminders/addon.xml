@@ -3,7 +3,7 @@
     <id>tsp_reorder_reminders</id>
     <name>The Software People - Re-Order Reminders</name>
     <description>The Software People (TSP) Reorder Reminders for CS-Cart allows users to be reminded when it is time to re-order a product. For more details visit us online at www.thesoftwarepeople.com</description>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <priority>1111000001</priority>
     <position>0</position>
     <status>active</status>
