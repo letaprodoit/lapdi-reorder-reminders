@@ -4,9 +4,9 @@
  *
  * @package		TSP Re-Order Reminders for CS-Cart
  * @filename	fn.tsp_reorder_reminders.php
- * @version		2.0.0
+ * @version		1.1.1
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
- * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
+ * @copyright	Copyright ¬© 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Helper functions for addon
  * 
@@ -81,7 +81,10 @@ function fn_tspror_install_product_fields ()
 				
 				// Install descriptions
 				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'en', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
-
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'el', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'es', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'fr', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
+				
 				// Install option variants
 				$var1 = db_query('INSERT INTO ?:product_option_variants ?e', array('position' => 0, 'option_id' => $reminder_id, 'modifier' => 0.00));
 				$var2 = db_query('INSERT INTO ?:product_option_variants ?e', array('position' => 5, 'option_id' => $reminder_id, 'modifier' => 0.00));
@@ -109,6 +112,30 @@ function fn_tspror_install_product_fields ()
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var5, 'variant_name' => '6 Months'));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var6, 'variant_name' => '9 Months'));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var7, 'variant_name' => '1 Year'));
+				
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var1, 'variant_name' => 'Den Ypenthýmisi̱'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var2, 'variant_name' => '1 mí̱nas'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var3, 'variant_name' => '2 mí̱nas'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var4, 'variant_name' => '3 mí̱nas'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var5, 'variant_name' => '6 mí̱nas'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var6, 'variant_name' => '9 mí̱nas'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var7, 'variant_name' => '1 étos'));
+
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var1, 'variant_name' => 'ningún recordatorio'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var2, 'variant_name' => '1 mes'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var3, 'variant_name' => '2 mes'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var4, 'variant_name' => '3 mes'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var5, 'variant_name' => '6 mes'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var6, 'variant_name' => '9 mes'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var7, 'variant_name' => '1 año'));
+
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var1, 'variant_name' => 'pas de rappel'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var2, 'variant_name' => '1 mois'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var3, 'variant_name' => '2 mois'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var4, 'variant_name' => '3 mois'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var5, 'variant_name' => '6 mois'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var6, 'variant_name' => '9 mois'));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var7, 'variant_name' => '1 année'));
 			}//end elseif
 		}//end if
 	}//end foreach
@@ -726,7 +753,7 @@ function fn_tspror_update_product_metadata($product_id, $field_name, $value)
 		$data = array(
 			'product_id' => $product_id, 
 			'field_name' => $field_name,
-			'value' => htmlentities(trim($value))
+			'value' => trim($value)
 		);
 		db_query("REPLACE INTO ?:addon_tsp_reorder_reminders_product_metadata ?e", $data);
 	}//endif

@@ -3,7 +3,7 @@
     <id>tsp_reorder_reminders</id>
     <name>The Software People - Re-Order Reminders</name>
     <description>The Software People (TSP) Reorder Reminders for CS-Cart allows users to be reminded when it is time to re-order a product. For more details visit us online at www.thesoftwarepeople.com</description>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <priority>1111000001</priority>
     <position>0</position>
     <status>active</status>
@@ -29,6 +29,69 @@
         <item lang="en" id="tspror_notification">Re-Order Notification for [product_name]</item>
         <item lang="en" id="tspror_notification_msg">Per your request, we are informing you that it is now [reminder_interval] since your last order and it is now time to re-order [product_name]. To re-order this item visit Order #[order_url] and click on '[reorder_this_order]'</item>
         <item lang="en" id="tspror_title">Re-Order Reminders</item>    
+
+        <item lang="el" id="tsp_reorder_reminders"> Oi ánthro̱poi Logismikó :̱ Anadiátaxi̱ Ypenthymíseis</item>
+        <item lang="el" id="tspror_details"> Leptoméreies Ypenthýmisi̱</item>
+        <item lang="el" id="tspror_reminders"> Anadiátaxi̱ Ypenthymíseis</item>
+        <item lang="el" id="tspror_reminders_menu_description"> Lísta ypenthymíseis parangelías zi̱teítai apó tous pelátes sas .</item>
+        <item lang="el" id="tspror_reminder"> Thýmisé mou na Anadiátaxi̱ Se ?</item>
+        <item lang="el" id="tspror_reminder_comment"> Póte tha thélate na sas eni̱meró̱noume gia ti̱n ek néou parangelía?</item>
+        <item lang="el" id="tspror_reminder_completed"> Olokli̱ró̱thi̱ke</item>
+        <item lang="el" id="tspror_reminder_created"> Di̱miourgí̱thi̱ke ti̱n</item>
+        <item lang="el" id="tspror_reminder_date"> thýmise ti̱n</item>
+        <item lang="el" id="tspror_reminder_default"> proepilegméni̱s ypenthýmisi̱s Epilogí̱</item>
+        <item lang="el" id="tspror_reminder_editing"> Epexergasía Ypenthýmisi̱</item>         
+        <item lang="el" id="tspror_reminder_expire"> O mégistos arithmós to̱n forés dýo eidopoieí to chrí̱sti̱ ek néou parangelía ?</item>
+        <item lang="el" id="tspror_reminder_in"> Me Ypenthýmisi̱ Se </item>
+        <item lang="el" id="tspror_reminder_interval"> apostéllei eidopoií̱seis ypenthýmisi̱s káthe</item>
+        <item lang="el" id="tspror_reminder_reordered"> anadiatássontai ti̱n</item>
+        <item lang="el" id="tspror_reminder_sent"> Sýnolo Sent</item>
+        <item lang="el" id="tspror_reminder_status"> Ypenthýmisi̱ Katástasi̱</item>
+        <item lang="el" id="tspror_notification"> Ypenthýmisi̱ parangelías gia [ product_name ]</item>
+        <item lang="el" id="tspror_notification_msg"> aná aíti̱má sas , mas pli̱roforeí min'nk sas tó̱ra det [ reminder_interval ] apó ti̱n telef̱taía parangelía sas kai eínai pléon kairós na alláxete ti̱ seirá [ product_name ] . Ti̱n ek néou gia af̱tó to episkeftheíte Parangelía # [ order_url ] kai kánte klik sto « [ reorder_this_order ] »</item>
+        <item lang="el" id="tspror_title"> Anadiátaxi̱ Ypenthymíseis</item>
+         
+        <item lang="es" id="tsp_reorder_reminders"> Los Software Personas : Reordenar Recordatorios</item>
+        <item lang="es" id="tspror_details"> detalles del recordatorio</item>
+        <item lang="es" id="tspror_reminders"> Reordenar Recordatorios</item>
+        <item lang="es" id="tspror_reminders_menu_description"> Lista de recordatorios de referencia de los solicitados por sus clientes.</item>
+        <item lang="es" id="tspror_reminder"> Remind Me para reordenar En ?</item>
+        <item lang="es" id="tspror_reminder_comment"> Cuándo me avisen para reordenar</item> ?
+        <item lang="es" id="tspror_reminder_completed"> Completado</item>
+        <item lang="es" id="tspror_reminder_created"> Creado On</item>
+        <item lang="es" id="tspror_reminder_date"> recordó On</item>
+        <item lang="es" id="tspror_reminder_default"> aviso predeterminado Choice</item>
+        <item lang="es" id="tspror_reminder_editing"> Edición Recordatorio</item>
+        <item lang="es" id="tspror_reminder_expire"> El número máximo de dos veces notificar al usuario de re- orden?</item>
+        <item lang="es" id="tspror_reminder_in"> Remind Me En</item>
+        <item lang="es" id="tspror_reminder_interval"> enviar notificaciones de aviso cada</item>
+        <item lang="es" id="tspror_reminder_reordered"> reordenó On</item>
+        <item lang="es" id="tspror_reminder_sent"> total Sent</item>
+        <item lang="es" id="tspror_reminder_status"> Recordatorio Estado</item>
+        <item lang="es" id="tspror_notification"> Aviso de pedido por [ product_name ]</item>
+        <item lang="es" id="tspror_notification_msg"> según su petición, se nos informa que Det ming ahora [ reminder_interval ] desde el último fin y ahora es tiempo de volver a pedir [ product_name ] . Para volver a pedir este artículo visite Order # [ order_url ] y haga clic en ' [ reorder_this_order ] '</item>
+        <item lang="es" id="tspror_title"> Reordenar Recordatorios</item>
+
+        <item lang="fr" id="tsp_reorder_reminders"> Les logiciels de personnes: Réorganiser les rappels</item>
+        <item lang="fr" id="tspror_details"> Détails de rappel</item>
+        <item lang="fr" id="tspror_reminders"> Réorganiser rappels</item>
+        <item lang="fr" id="tspror_reminders_menu_description"> Liste des rappels de réapprovisionnement demandées par vos clients .</item>
+        <item lang="fr" id="tspror_reminder"> Remind Me réorganisez dans ?</item>
+        <item lang="fr" id="tspror_reminder_comment"> Quand souhaitez-vous pour être informé de commander à nouveau ?</item>
+        <item lang="fr" id="tspror_reminder_completed"> Terminé</item>
+        <item lang="fr" id="tspror_reminder_created"> Créé le</item>
+        <item lang="fr" id="tspror_reminder_date"> Rappelé Sur</item>
+        <item lang="fr" id="tspror_reminder_default"> Rappel par défaut Choix</item>
+        <item lang="fr" id="tspror_reminder_editing"> édition Rappel</item>
+        <item lang="fr" id="tspror_reminder_expire"> Le nombre maximum de deux fois notifier à l'utilisateur de commander à nouveau ?</item>
+        <item lang="fr" id="tspror_reminder_in"> Remind Me In</item>
+        <item lang="fr" id="tspror_reminder_interval"> envoyer des notifications de rappel tous les</item>
+        <item lang="fr" id="tspror_reminder_reordered"> réorganisés sur</item>
+        <item lang="fr" id="tspror_reminder_sent"> Total émis</item>
+        <item lang="fr" id="tspror_reminder_status"> Rappel Statut</item>
+        <item lang="fr" id="tspror_notification"> Réorganiser notification pour [ product_name ]</item>
+        <item lang="fr" id="tspror_notification_msg"> par votre demande, nous sommes informés ming vous DET maintenant [ reminder_interval ] depuis votre dernière commande et il est maintenant temps de réorganiser [ product_name ] . Pour réorganiser cet ouvrage visite Order # [ order_url ] et cliquez sur « [ reorder_this_order ]</item>
+        <item lang="fr" id="tspror_title"> Réorganiser rappels</item>   
     </language_variables>
     <tab_order>prepend</tab_order>
     <settings>
@@ -37,12 +100,18 @@
                 <!-- Tab name in the default language -->
                 <name>Basic Settings</name>     
                 <translations>
-                    <item lang="ES" for="name">Basic Settings</item>
-                    <item lang="FR" for="name">Basic Settings</item>
+                    <item lang="es" for="name">Ajustes básicos</item>
+                    <item lang="el" for="name">vasikés rythmíseis</item>
+                    <item lang="fr" for="name">Réglages de base</item>
                 </translations>
                 <items>
                     <item id="delete_reminder_data">
                         <name>Delete Reminder Data on Uninstall</name>
+                        <translations>
+                            <item lang="es" for="name">Eliminar Recordatorio datos sobre Desinstalar</item>
+                            <item lang="el" for="name">Diagrafí̱ Dedoméno̱n Ypenthýmisi̱ gia ti̱n apenkatástasi̱</item>
+                            <item lang="fr" for="name">Supprimer les données de rappel sur Désinstaller</item>
+                        </translations>
                         <type>selectbox</type>
                         <default_value>N</default_value>
                         <variants>
@@ -61,6 +130,11 @@
                     </item>
                     <item id="time_between_reminders">
                         <name>Send reminder notifications every?</name>
+                        <translations>
+                            <item lang="es" for="name">Enviar notificaciones de aviso cada?</item>
+                            <item lang="el" for="name">Apostolí̱ eidopoií̱seo̱n ypenthýmisi̱s káthe ?</item>
+                            <item lang="fr" for="name">Envoyer des notifications de rappel tous les?</item>
+                        </translations>
                         <type>selectbox</type>
                         <default_value>2 Weeks</default_value>
                         <variants>
@@ -113,9 +187,16 @@
             ) ENGINE=MyISAM DEFAULT CHARSET=UTF8
         </item>
         <item for="install" lang="en" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('en','privileges.manage_reminders', 'Manage reminders', 'Manage reminders');</item>
-        <item for="install" lang="en" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">REPLACE INTO ?:privileges (privilege, is_default, section_id) VALUES ('manage_reminders', 'Y', 'addons');</item>
-        <item for="uninstall" lang="en" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">DELETE FROM ?:privileges WHERE privilege = 'manage_reminders'</item>
-        <item for="uninstall" lang="en" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">DELETE FROM ?:language_values WHERE name = 'privileges.manage_reminders'</item>
+        <item for="install" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">REPLACE INTO ?:privileges (privilege, is_default, section_id) VALUES ('manage_reminders', 'Y', 'addons');</item>
+        <item for="uninstall" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">DELETE FROM ?:privileges WHERE privilege = 'manage_reminders'</item>
+        <item for="uninstall" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">DELETE FROM ?:language_values WHERE name = 'privileges.manage_reminders'</item>
+
+        <item for="install" lang="es" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('es','privileges.manage_reminders', 'Gestione recordatorios', 'Gestione recordatorios');</item>
+
+        <item for="install" lang="el" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('el','privileges.manage_reminders', 'Diacheiristeíte ypenthymíseis', 'Diacheiristeíte ypenthymíseis');</item>
+
+        <item for="install" lang="fr" editions="COMMUNITY,PROFESSIONAL,MULTIVENDOR,ULTIMATE">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('fr','privileges.manage_reminders', 'Gérer les rappels', 'Gérer les rappels');</item>
+
     </queries>
     <functions>
         <item for="install">fn_tspror_install_product_fields</item>
