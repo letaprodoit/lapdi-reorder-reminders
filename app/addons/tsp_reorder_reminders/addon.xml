@@ -8,6 +8,14 @@
     <position>0</position>
     <status>active</status>
     <default_language>en</default_language>
+    <translations>
+        <item lang="es" for="name">El Pueblo de software - ReOrder Recordatorios</item>
+        <item lang="el" for="name">Oi ánthro̱poi Logismikó - Anadiátaxi̱ Ypenthymíseis</item>
+        <item lang="fr" for="name">Les gens Logiciels - réorganiser rappels</item>
+        <item lang="es" for="description">Los Software People (TSP) Reordenar Recordatorios para CS-Cart permite a los usuarios que recordar cuando es el momento de volver a pedir un producto. Para más información visítenos en línea en www.thesoftwarepeople.com</item>
+        <item lang="el" for="description">Oi ánthro̱poi Logismikó (TSP) Anadiátaxi̱ Ypenthymíseis gia to CS-Cart epitrépei stous chrí̱stes na thymoúntai ótan í̱rthe i̱ ó̱ra na xaná-na parangeílete éna proïón. Gia perissóteres pli̱roforíes episkefteíte mas sti̱n i̱lektronikí̱ diéf̱thynsi̱ www.thesoftwarepeople.com</item>
+        <item lang="fr" for="description">Les logiciels personnes (TSP) Réorganiser rappels pour CS-Cart permet aux utilisateurs d'être rappelé quand il est temps de re-commander un produit. Pour plus de détails visitez notre site Internet www.thesoftwarepeople.com</item>
+    </translations>
     <language_variables>
         <item lang="en" id="tsp_reorder_reminders">The Software People: Re-Order Reminders</item> 
         <item lang="en" id="tspror_details">Reminder Details</item>    
@@ -201,17 +209,14 @@
                 PRIMARY KEY  (`id`)
             ) ENGINE=MyISAM DEFAULT CHARSET=UTF8
         </item>
-        <item for="install" lang="en">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('en','privileges.manage_reminders', 'Manage reminders', 'Manage reminders');</item>
         <item for="install">REPLACE INTO ?:privileges (privilege, is_default, section_id) VALUES ('manage_reminders', 'Y', 'addons');</item>
         <item for="uninstall">DELETE FROM ?:privileges WHERE privilege = 'manage_reminders'</item>
         <item for="uninstall">DELETE FROM ?:language_values WHERE name = 'privileges.manage_reminders'</item>
 
+        <item for="install" lang="en">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('en','privileges.manage_reminders', 'Manage reminders', 'Manage reminders');</item>
         <item for="install" lang="es">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('es','privileges.manage_reminders', 'Gestione recordatorios', 'Gestione recordatorios');</item>
-
         <item for="install" lang="el">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('el','privileges.manage_reminders', 'Diacheiristeíte ypenthymíseis', 'Diacheiristeíte ypenthymíseis');</item>
-
         <item for="install" lang="fr">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('fr','privileges.manage_reminders', 'Gérer les rappels', 'Gérer les rappels');</item>
-
     </queries>
     <functions>
         <item for="install">fn_tspror_install_product_fields</item>

@@ -90,8 +90,8 @@
         </copy>
  
     	<!-- Creating ZIP file -->
-        <delete file="../../${name}_41x.zip" />
-        <zip destfile="../../${name}_41x.zip">
+        <delete file="../../${name}_4x.zip" />
+        <zip destfile="../../${name}_4x.zip">
             <fileset refid="allfiles" />
         </zip>
     </target>
