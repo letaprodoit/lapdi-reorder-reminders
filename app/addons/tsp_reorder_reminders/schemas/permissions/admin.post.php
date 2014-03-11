@@ -12,15 +12,11 @@
  * 
  */
 
-if (!empty($schema))
-{
-	$schema['reminders'] = array (
-			'permissions' => 'manage_reminders',
-	);
+$schema['reminders'] = array (
+	'permissions' => 'manage_reminders',
+);
+$schema['tools']['modes']['update_status']['param_permissions']['table']['addon_tsp_reminders'] = 'manage_reminders';
 	
-	$schema['tools']['modes']['update_status']['param_permissions']['table']['addon_tsp_reorder_reminders'] = 'manage_reminders';
-	
-	return $schema;
-}
+return $schema;
 
 ?>
