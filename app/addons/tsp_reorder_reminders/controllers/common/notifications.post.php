@@ -4,7 +4,7 @@
  *
  * @package		TSP Re-Order Reminders for CS-Cart
  * @filename	notifications.post.php
- * @version		1.0.1
+ * @version		1.1.6
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -151,9 +151,9 @@ if ($mode == 'cron')
 	}//end foreach
 	
     fn_log_event('requests', 'http', array(
-    	'date' => $now,
-        'message' => __('tspror_reminders') . __('sent') . ": $notifications_sent".PHP_EOL.
-        			__('tspror_reminders') . __('open') . ": ".count($active_reminders),
+    	'url' => 'index.php?dispatch=notifications.cron',
+        'response' => __('tspror_reminders') . " ". __('sent') . ": $notifications_sent".PHP_EOL.
+        			__('tspror_reminders') . " ". __('open') . ": ".count($active_reminders),
     ));
 	
 	exit;

@@ -18,7 +18,7 @@ For up-to-date installation and setup notes, visit the FAQ:
 * Download from repository
 * Unzip the zip file in the directory where CS-Cart runs
 * If the zip creates a new directory called `tsp-reorder-reminders` you will need to run the install script, else you are done
-* If `tsp-reorder-reminders` folder created by zip, Navigate to the folder. Update the $target_loc in the install.php and run its. Command: php install.php
+* If `tsp-reorder-reminders` folder was created by the zip, Navigate to the folder. Update the `$target_loc` and `$theme_folder_name` in the install.php and run its. Command: php install.php
 * Open CS-Cart Administration Control Panel
 * Navigate to Addons -> Manage Addons
 * Find the "The Software People: Re-Order Reminders" addon and click "Install" (If you don't see it make sure "All Stores" is selected at the top of the screen)
