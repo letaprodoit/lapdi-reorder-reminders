@@ -4,7 +4,7 @@
  *
  * @package		TSP Re-Order Reminders for CS-Cart
  * @filename	config.php
- * @version		1.0.1
+ * @version		1.1.7
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
  * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
@@ -18,8 +18,6 @@ use Tygh\Registry;
 
 require_once 'lib/fn.tsp_reorder_reminders.php';
 
-Registry::set('tspror_no_reminder', 'No Reminder');
-
 Registry::set('tspror_reminder_statuses_long', array(
 		'O' => array(
 			'status_id' 	=> 1,
@@ -27,10 +25,9 @@ Registry::set('tspror_reminder_statuses_long', array(
 			'color_status'	=> 'O',
 			'type' 			=> 'A',
 			'is_default' 	=> 'Y',
-			'description' 	=> 'Open',
-			'email_subj' 	=> 'has been created',
-			'email_header' 	=> 'Your reminder has been created successfully.',
-			'lang_code' 	=> 'en',
+			'description' 	=> __("tspror_open"),
+			'email_subj' 	=> __("tspror_open_email_subj"),
+			'email_header' 	=> __("tspror_open_email_header"),
 		),
 		'C' => array(
 			'status_id' 	=> 4,
@@ -38,16 +35,15 @@ Registry::set('tspror_reminder_statuses_long', array(
 			'color_status'	=> 'P',
 			'type' 			=> 'A',
 			'is_default' 	=> 'Y',
-			'description' 	=> 'Completed',
-			'email_subj' 	=> 'has been completed',
-			'email_header' 	=> 'Your reminder has been completed successfully.',
-			'lang_code' 	=> 'en',
+			'description' 	=> __("tspror_completed"),
+			'email_subj' 	=> __("tspror_completed_email_subj"),
+			'email_header' 	=> __("tspror_completed_email_header"),
 		),
 ));
 
 Registry::set('tspror_reminder_statuses_short', array(
-		'O' => 'Open',
-		'C' => 'Completed'
+		'O' => __("tspror_open"),
+		'C' => __("tspror_completed")
 ));
 
 Registry::set('tspror_reminder_status_params', array(
@@ -78,13 +74,13 @@ Registry::set('tspror_product_data_field_names', array(
 		'type' => 'S',
 		'default_value_metadata_key' => 'tspror_reminder_default',
 		'options' => array(
-			Registry::get('tspror_no_reminder'),
-			'1 Month',
-			'2 Months',
-			'3 Months',
-			'6 Months',
-			'9 Months',
-			'1 Year',
+			__("tspror_no_reminder"),
+			'1 '.__("tspror_month"),
+			'2 '.__("tspror_months"),
+			'3 '.__("tspror_months"),
+			'6 '.__("tspror_months"),
+			'9 '.__("tspror_months"),
+			'1 '.__("tspror_year"),
 		)
 	),
 ));

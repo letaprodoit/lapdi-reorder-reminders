@@ -3,113 +3,153 @@
     <id>tsp_reorder_reminders</id>
     <name>The Software People - Re-Order Reminders</name>
     <description>The Software People (TSP) Reorder Reminders for CS-Cart allows users to be reminded when it is time to re-order a product. For more details visit us online at www.thesoftwarepeople.com</description>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <priority>1111005116</priority>
     <position>0</position>
     <status>active</status>
     <default_language>en</default_language>
     <translations>
         <item lang="es" for="name">El Pueblo de software - ReOrder Recordatorios</item>
-        <item lang="el" for="name">Oi ánthro̱poi Logismikó - Anadiátaxi̱ Ypenthymíseis</item>
+        <item lang="el" for="name">Οι άνθρωποι Λογισμικό - Re-Order Υπενθυμίσεις</item>
         <item lang="fr" for="name">Les gens Logiciels - réorganiser rappels</item>
         <item lang="es" for="description">Los Software People (TSP) Reordenar Recordatorios para CS-Cart permite a los usuarios que recordar cuando es el momento de volver a pedir un producto. Para más información visítenos en línea en www.thesoftwarepeople.com</item>
-        <item lang="el" for="description">Oi ánthro̱poi Logismikó (TSP) Anadiátaxi̱ Ypenthymíseis gia to CS-Cart epitrépei stous chrí̱stes na thymoúntai ótan í̱rthe i̱ ó̱ra na xaná-na parangeílete éna proïón. Gia perissóteres pli̱roforíes episkefteíte mas sti̱n i̱lektronikí̱ diéf̱thynsi̱ www.thesoftwarepeople.com</item>
+        <item lang="el" for="description">Οι άνθρωποι Λογισμικό (TSP) Αναδιοργάνωση Υπενθυμίσεις για CS-Cart επιτρέπει στους χρήστες να θυμούνται όταν ήρθε η ώρα να ξανά-για ένα προϊόν. Για περισσότερες πληροφορίες επισκεφτείτε μας στην ηλεκτρονική διεύθυνση www.thesoftwarepeople.com</item>
         <item lang="fr" for="description">Les logiciels personnes (TSP) Réorganiser rappels pour CS-Cart permet aux utilisateurs d'être rappelé quand il est temps de re-commander un produit. Pour plus de détails visitez notre site Internet www.thesoftwarepeople.com</item>
     </translations>
     <language_variables>
-        <item lang="en" id="tsp_reorder_reminders">The Software People: Re-Order Reminders</item> 
-        <item lang="en" id="tspror_details">Reminder Details</item>    
-        <item lang="en" id="tspror_reminders">Re-Order Reminders</item>    
+        <item lang="en" id="tsp_reorder_reminders">The Software People: Re-Order Reminders</item>
+        <item lang="en" id="tspror_details">Reminder Details</item>
+        <item lang="en" id="tspror_reminders">Re-Order Reminders</item>
         <item lang="en" id="tspror_reminders_menu_description">List of reorder reminders requested by your customers.</item>
-        <item lang="en" id="tspror_reminder">Remind Me to Re-Order In?</item>      
-        <item lang="en" id="tspror_reminder_comment">When would you like to be notified to re-order?</item>    
-        <item lang="en" id="tspror_reminder_completed">Completed</item>      
-        <item lang="en" id="tspror_reminder_created">Created On</item>      
-        <item lang="en" id="tspror_reminder_date">Reminded On</item>    
-        <item lang="en" id="tspror_reminder_default">Default Reminder Choice</item>      
-        <item lang="en" id="tspror_reminder_editing">Editing Reminder</item>    
-        <item lang="en" id="tspror_reminder_expire">The maximum number of times to notify the user of re-order?</item>    
-        <item lang="en" id="tspror_reminder_in">Remind Me In?</item>      
-        <item lang="en" id="tspror_reminder_interval">Send reminder notifications every?</item>    
-        <item lang="en" id="tspror_reminder_reordered">Reordered On</item>    
-        <item lang="en" id="tspror_reminder_sent">Total Sent</item>      
-        <item lang="en" id="tspror_reminder_status">Reminder Status</item>      
+        <item lang="en" id="tspror_reminder">Remind Me to Re-Order In?</item>
+        <item lang="en" id="tspror_reminder_comment">When would you like to be notified to re-order?</item>
+        <item lang="en" id="tspror_reminder_completed">Completed</item>
+        <item lang="en" id="tspror_reminder_created">Created On</item>
+        <item lang="en" id="tspror_reminder_date">Reminded On</item>
+        <item lang="en" id="tspror_reminder_default">Default Reminder Choice</item>
+        <item lang="en" id="tspror_reminder_editing">Editing Reminder</item>
+        <item lang="en" id="tspror_reminder_expire">The maximum number of times to notify the user of re-order?</item>
+        <item lang="en" id="tspror_reminder_in">Remind Me In?</item>
+        <item lang="en" id="tspror_reminder_interval">Send reminder notifications every?</item>
+        <item lang="en" id="tspror_reminder_reordered">Reordered On</item>
+        <item lang="en" id="tspror_reminder_sent">Total Sent</item>
+        <item lang="en" id="tspror_reminder_status">Reminder Status</item>
         <item lang="en" id="tspror_notification">Re-Order Notification for [product_name]</item>
         <item lang="en" id="tspror_notification_msg">Per your request, we are informing you that it is now [reminder_interval] since your last order and it is now time to re-order [product_name]. To re-order this item visit Order #[order_url] and click on '[reorder_this_order]'</item>
-        <item lang="en" id="tspror_title">Re-Order Reminders</item>    
+        <item lang="en" id="tspror_title">Re-Order Reminders</item>
+		<item lang="en" id="tspror_no_remind">No Reminders</item>
+        <item lang="en" id="tspror_open">Open</item>
+        <item lang="en" id="tspror_open_email_subj">has been created</item>
+        <item lang="en" id="tspror_open_email_header">Your reminder has been created successfully.</item>
+        <item lang="en" id="tspror_completed">Completed</item>
+        <item lang="en" id="tspror_completed_email_subj">has been completed</item>
+        <item lang="en" id="tspror_completed_email_header">Your reminder has been completed successfully.</item>
+        <item lang="en" id="tspror_month">Month</item>
+        <item lang="en" id="tspror_months">Months</item>
+        <item lang="en" id="tspror_year">Year</item>
 
-        <item lang="el" id="tsp_reorder_reminders"> Oi ánthro̱poi Logismikó :̱ Anadiátaxi̱ Ypenthymíseis</item>
-        <item lang="el" id="tspror_details"> Leptoméreies Ypenthýmisi̱</item>
-        <item lang="el" id="tspror_reminders"> Anadiátaxi̱ Ypenthymíseis</item>
-        <item lang="el" id="tspror_reminders_menu_description"> Lísta ypenthymíseis parangelías zi̱teítai apó tous pelátes sas .</item>
-        <item lang="el" id="tspror_reminder"> Thýmisé mou na Anadiátaxi̱ Se ?</item>
-        <item lang="el" id="tspror_reminder_comment"> Póte tha thélate na sas eni̱meró̱noume gia ti̱n ek néou parangelía?</item>
-        <item lang="el" id="tspror_reminder_completed"> Olokli̱ró̱thi̱ke</item>
-        <item lang="el" id="tspror_reminder_created"> Di̱miourgí̱thi̱ke ti̱n</item>
-        <item lang="el" id="tspror_reminder_date"> thýmise ti̱n</item>
-        <item lang="el" id="tspror_reminder_default"> proepilegméni̱s ypenthýmisi̱s Epilogí̱</item>
-        <item lang="el" id="tspror_reminder_editing"> Epexergasía Ypenthýmisi̱</item>         
-        <item lang="el" id="tspror_reminder_expire"> O mégistos arithmós to̱n forés dýo eidopoieí to chrí̱sti̱ ek néou parangelía ?</item>
-        <item lang="el" id="tspror_reminder_in"> Me Ypenthýmisi̱ Se </item>
-        <item lang="el" id="tspror_reminder_interval"> apostéllei eidopoií̱seis ypenthýmisi̱s káthe</item>
-        <item lang="el" id="tspror_reminder_reordered"> anadiatássontai ti̱n</item>
-        <item lang="el" id="tspror_reminder_sent"> Sýnolo Sent</item>
-        <item lang="el" id="tspror_reminder_status"> Ypenthýmisi̱ Katástasi̱</item>
-        <item lang="el" id="tspror_notification"> Ypenthýmisi̱ parangelías gia [ product_name ]</item>
-        <item lang="el" id="tspror_notification_msg"> aná aíti̱má sas , mas pli̱roforeí min'nk sas tó̱ra det [ reminder_interval ] apó ti̱n telef̱taía parangelía sas kai eínai pléon kairós na alláxete ti̱ seirá [ product_name ] . Ti̱n ek néou gia af̱tó to episkeftheíte Parangelía # [ order_url ] kai kánte klik sto « [ reorder_this_order ] »</item>
-        <item lang="el" id="tspror_title"> Anadiátaxi̱ Ypenthymíseis</item>
-         
-        <item lang="es" id="tsp_reorder_reminders"> Los Software Personas : Reordenar Recordatorios</item>
-        <item lang="es" id="tspror_details"> detalles del recordatorio</item>
-        <item lang="es" id="tspror_reminders"> Reordenar Recordatorios</item>
-        <item lang="es" id="tspror_reminders_menu_description"> Lista de recordatorios de referencia de los solicitados por sus clientes.</item>
-        <item lang="es" id="tspror_reminder"> Remind Me para reordenar En ?</item>
-        <item lang="es" id="tspror_reminder_comment"> Cuándo me avisen para reordenar</item> ?
-        <item lang="es" id="tspror_reminder_completed"> Completado</item>
-        <item lang="es" id="tspror_reminder_created"> Creado On</item>
-        <item lang="es" id="tspror_reminder_date"> recordó On</item>
-        <item lang="es" id="tspror_reminder_default"> aviso predeterminado Choice</item>
-        <item lang="es" id="tspror_reminder_editing"> Edición Recordatorio</item>
-        <item lang="es" id="tspror_reminder_expire"> El número máximo de dos veces notificar al usuario de re- orden?</item>
-        <item lang="es" id="tspror_reminder_in"> Remind Me En</item>
-        <item lang="es" id="tspror_reminder_interval"> enviar notificaciones de aviso cada</item>
-        <item lang="es" id="tspror_reminder_reordered"> reordenó On</item>
-        <item lang="es" id="tspror_reminder_sent"> total Sent</item>
-        <item lang="es" id="tspror_reminder_status"> Recordatorio Estado</item>
-        <item lang="es" id="tspror_notification"> Aviso de pedido por [ product_name ]</item>
-        <item lang="es" id="tspror_notification_msg"> según su petición, se nos informa que Det ming ahora [ reminder_interval ] desde el último fin y ahora es tiempo de volver a pedir [ product_name ] . Para volver a pedir este artículo visite Order # [ order_url ] y haga clic en ' [ reorder_this_order ] '</item>
-        <item lang="es" id="tspror_title"> Reordenar Recordatorios</item>
-
-        <item lang="fr" id="tsp_reorder_reminders"> Les logiciels de personnes: Réorganiser les rappels</item>
-        <item lang="fr" id="tspror_details"> Détails de rappel</item>
-        <item lang="fr" id="tspror_reminders"> Réorganiser rappels</item>
-        <item lang="fr" id="tspror_reminders_menu_description"> Liste des rappels de réapprovisionnement demandées par vos clients .</item>
-        <item lang="fr" id="tspror_reminder"> Remind Me réorganisez dans ?</item>
-        <item lang="fr" id="tspror_reminder_comment"> Quand souhaitez-vous pour être informé de commander à nouveau ?</item>
-        <item lang="fr" id="tspror_reminder_completed"> Terminé</item>
-        <item lang="fr" id="tspror_reminder_created"> Créé le</item>
-        <item lang="fr" id="tspror_reminder_date"> Rappelé Sur</item>
-        <item lang="fr" id="tspror_reminder_default"> Rappel par défaut Choix</item>
-        <item lang="fr" id="tspror_reminder_editing"> édition Rappel</item>
-        <item lang="fr" id="tspror_reminder_expire"> Le nombre maximum de deux fois notifier à l'utilisateur de commander à nouveau ?</item>
-        <item lang="fr" id="tspror_reminder_in"> Remind Me In</item>
-        <item lang="fr" id="tspror_reminder_interval"> envoyer des notifications de rappel tous les</item>
-        <item lang="fr" id="tspror_reminder_reordered"> réorganisés sur</item>
-        <item lang="fr" id="tspror_reminder_sent"> Total émis</item>
-        <item lang="fr" id="tspror_reminder_status"> Rappel Statut</item>
-        <item lang="fr" id="tspror_notification"> Réorganiser notification pour [ product_name ]</item>
-        <item lang="fr" id="tspror_notification_msg"> par votre demande, nous sommes informés ming vous DET maintenant [ reminder_interval ] depuis votre dernière commande et il est maintenant temps de réorganiser [ product_name ] . Pour réorganiser cet ouvrage visite Order # [ order_url ] et cliquez sur « [ reorder_this_order ]</item>
-        <item lang="fr" id="tspror_title"> Réorganiser rappels</item>   
+		<item lang="el" id="tsp_reorder_reminders">Το λογισμικό Άνθρωποι: Re-Order Υπενθυμίσεις</item>
+        <item lang="el" id="tspror_details">Υπενθύμιση Λεπτομέρειες</item>
+        <item lang="el" id="tspror_reminders">Re-Order Υπενθυμίσεις</item>
+        <item lang="el" id="tspror_reminders_menu_description">λίστα των υπενθυμίσεων αναπαραγγελίας αίτηση από τους πελάτες σας.</item>
+        <item lang="el" id="tspror_reminder">Υπενθύμιση για Re-Order Σε;</item>
+        <item lang="el" id="tspror_reminder_comment">Πότε θα επιθυμούσατε να κοινοποιημένοι δύο re-παραγγελία;</item>
+        <item lang="el" id="tspror_reminder_completed">Ολοκληρώθηκε</item>
+        <item lang="el" id="tspror_reminder_created">Δημιουργήθηκε την</item>
+        <item lang="el" id="tspror_reminder_date">Υπενθυμίζεται On</item>
+        <item lang="el" id="tspror_reminder_default">Default Υπενθύμιση Επιλογή</item>
+        <item lang="el" id="tspror_reminder_editing">Επεξεργασία Υπενθύμιση</item>
+        <item lang="el" id="tspror_reminder_expire">Ο μέγιστος αριθμός των φορές δύο ειδοποιεί το χρήστη του νέου παραγγελία;</item>
+        <item lang="el" id="tspror_reminder_in">Υπενθύμιση Σε</item>
+        <item lang="el" id="tspror_reminder_interval">στείλει ειδοποιήσεις υπενθύμισης κάθε φορά;</item>
+        <item lang="el" id="tspror_reminder_reordered">αναδιατάσσονται On</item>
+        <item lang="el" id="tspror_reminder_sent">Σύνολο Sent</item>
+        <item lang="el" id="tspror_reminder_status">Υπενθύμιση Κατάσταση</item>
+        <item lang="el" id="tspror_notification">Γνωστοποίηση Re-Order για [product_name]</item>
+        <item lang="el" id="tspror_notification_msg">Σύμφωνα με το αίτημά σας, είμαστε πλη μινγκ σας det er τώρα [reminder_interval] από την τελευταία παραγγελία σας και είναι πλέον καιρός να αλλάξετε τη σειρά [product_name]. Για την εκ νέου-για αυτό το item επίσκεψη Παραγγελία # [order_url] και κάντε κλικ στο "[reorder_this_order]»</item>
+        <item lang="el" id="tspror_title">Re-Order Υπενθυμίσεις</item>
+		<item lang="el" id="tspror_no_remind">Δεν Υπενθυμίσεις</item>
+        <item lang="el" id="tspror_open">Open</item>
+        <item lang="el" id="tspror_open_email_subj">έχει δημιουργηθεί</item>
+        <item lang="el" id="tspror_open_email_header">υπενθύμιση σας έχει δημιουργηθεί με επιτυχία.</item>
+        <item lang="el" id="tspror_completed">Ολοκληρώθηκε</item>
+        <item lang="el" id="tspror_completed_email_subj">er ολοκληρώθηκε</item>
+        <item lang="el" id="tspror_completed_email_header">υπενθύμιση er σας ολοκληρώθηκε με επιτυχία.</item>
+        <item lang="el" id="tspror_month">Μήνα</item>
+        <item lang="el" id="tspror_months">Μήνες</item>
+        <item lang="el" id="tspror_year">Έτος</item>
+		
+        <item lang="es" id="tsp_reorder_reminders">Los Software Personas : Reordenar Recordatorios</item>
+        <item lang="es" id="tspror_details">detalles del recordatorio</item>
+        <item lang="es" id="tspror_reminders">Reordenar Recordatorios</item>
+        <item lang="es" id="tspror_reminders_menu_description">Lista de recordatorios de referencia de los solicitados por sus clientes.</item>
+        <item lang="es" id="tspror_reminder">Remind Me para reordenar En ?</item>
+        <item lang="es" id="tspror_reminder_comment">Cuándo me avisen para reordenar</item>
+        <item lang="es" id="tspror_reminder_completed">Completado</item>
+        <item lang="es" id="tspror_reminder_created">Creado On</item>
+        <item lang="es" id="tspror_reminder_date">recordó On</item>
+        <item lang="es" id="tspror_reminder_default">aviso predeterminado Choice</item>
+        <item lang="es" id="tspror_reminder_editing">Edición Recordatorio</item>
+        <item lang="es" id="tspror_reminder_expire">El número máximo de dos veces notificar al usuario de re- orden?</item>
+        <item lang="es" id="tspror_reminder_in">Remind Me En</item>
+        <item lang="es" id="tspror_reminder_interval">enviar notificaciones de aviso cada</item>
+        <item lang="es" id="tspror_reminder_reordered">reordenó On</item>
+        <item lang="es" id="tspror_reminder_sent">total Sent</item>
+        <item lang="es" id="tspror_reminder_status">Recordatorio Estado</item>
+        <item lang="es" id="tspror_notification">Aviso de pedido por [product_name]</item>
+        <item lang="es" id="tspror_notification_msg">según su petición, se nos informa que Det ming ahora [ reminder_interval ] desde el último fin y ahora es tiempo de volver a pedir [ product_name ] . Para volver a pedir este artículo visite Order # [ order_url ] y haga clic en ' [ reorder_this_order ] '</item>
+        <item lang="es" id="tspror_title">Reordenar Recordatorios</item>
+		<item lang="es" id="tspror_no_remind">No Recordatorios</item>
+        <item lang="es" id="tspror_open">Abrir</item>
+        <item lang="es" id="tspror_open_email_subj">ha creado</item>
+        <item lang="es" id="tspror_open_email_header">Su recordatorio ha sido creado con éxito.</item>
+        <item lang="es" id="tspror_completed">Completado</item>
+        <item lang="es" id="tspror_completed_email_subj">er completado</item>
+        <item lang="es" id="tspror_completed_email_header">Su er recordatorio completada con éxito.</item>
+        <item lang="es" id="tspror_month">Mes</item>
+        <item lang="es" id="tspror_months">Meses</item>
+        <item lang="es" id="tspror_year">Año</item>
+		
+        <item lang="fr" id="tsp_reorder_reminders">Les logiciels de personnes: Réorganiser les rappels</item>
+        <item lang="fr" id="tspror_details">Détails de rappel</item>
+        <item lang="fr" id="tspror_reminders">Réorganiser rappels</item>
+        <item lang="fr" id="tspror_reminders_menu_description">Liste des rappels de réapprovisionnement demandées par vos clients .</item>
+        <item lang="fr" id="tspror_reminder">Remind Me réorganisez dans ?</item>
+        <item lang="fr" id="tspror_reminder_comment">Quand souhaitez-vous pour être informé de commander à nouveau ?</item>
+        <item lang="fr" id="tspror_reminder_completed">Terminé</item>
+        <item lang="fr" id="tspror_reminder_created">Créé le</item>
+        <item lang="fr" id="tspror_reminder_date">Rappelé Sur</item>
+        <item lang="fr" id="tspror_reminder_default">Rappel par défaut Choix</item>
+        <item lang="fr" id="tspror_reminder_editing">édition Rappel</item>
+        <item lang="fr" id="tspror_reminder_expire">Le nombre maximum de deux fois notifier à l'utilisateur de commander à nouveau ?</item>
+        <item lang="fr" id="tspror_reminder_in">Remind Me In</item>
+        <item lang="fr" id="tspror_reminder_interval">envoyer des notifications de rappel tous les</item>
+        <item lang="fr" id="tspror_reminder_reordered">réorganisés sur</item>
+        <item lang="fr" id="tspror_reminder_sent">Total émis</item>
+        <item lang="fr" id="tspror_reminder_status">Rappel Statut</item>
+        <item lang="fr" id="tspror_notification">Réorganiser notification pour [ product_name ]</item>
+        <item lang="fr" id="tspror_notification_msg">par votre demande, nous sommes informés ming vous DET maintenant [ reminder_interval ] depuis votre dernière commande et il est maintenant temps de réorganiser [ product_name ] . Pour réorganiser cet ouvrage visite Order # [ order_url ] et cliquez sur « [ reorder_this_order ]</item>
+        <item lang="fr" id="tspror_title">Réorganiser rappels</item>
+		<item lang="fr" id="tspror_no_remind">Pas de rappels</item>
+        <item lang="fr" id="tspror_open">Ouvrir</item>
+        <item lang="fr" id="tspror_open_email_subj">a été créé</item>
+        <item lang="fr" id="tspror_open_email_header">Votre rappel a été créé avec succès.</item>
+        <item lang="fr" id="tspror_completed">Terminé</item>
+        <item lang="fr" id="tspror_completed_email_subj">er terminée</item>
+        <item lang="fr" id="tspror_completed_email_header">Votre rappel er terminée avec succès.</item>
+        <item lang="fr" id="tspror_month">Mois</item>
+        <item lang="fr" id="tspror_months">mois</item>
+        <item lang="fr" id="tspror_year">Année</item>		
     </language_variables>
     <tab_order>prepend</tab_order>
     <settings>
         <sections>
             <section id="Settings">
                 <!-- Tab name in the default language -->
-                <name>Basic Settings</name>     
+                <name>Basic Settings</name>
                 <translations>
                     <item lang="es" for="name">Ajustes básicos</item>
-                    <item lang="el" for="name">vasikés rythmíseis</item>
+                    <item lang="el" for="name">Βασικές ρυθμίσεις</item>
                     <item lang="fr" for="name">Réglages de base</item>
                 </translations>
                 <items>
@@ -117,7 +157,7 @@
                         <name>Delete Reminder Data on Uninstall</name>
                         <translations>
                             <item lang="es" for="name">Eliminar Recordatorio datos sobre Desinstalar</item>
-                            <item lang="el" for="name">Diagrafí̱ Dedoméno̱n Ypenthýmisi̱ gia ti̱n apenkatástasi̱</item>
+                            <item lang="el" for="name">Διαγραφή δεδομένων Υπενθύμιση για την απεγκατάσταση</item>
                             <item lang="fr" for="name">Supprimer les données de rappel sur Désinstaller</item>
                         </translations>
                         <type>selectbox</type>
@@ -135,7 +175,7 @@
                         <name>The maximum number of times to notify the user of re-order?</name>
                         <translations>
                             <item lang="es" for="name">El número máximo de veces para notificar al usuario de nuevo pedido?</item>
-                            <item lang="el" for="name">O mégistos arithmós to̱n forés gia na eni̱meró̱sei ton chrí̱sti̱ ti̱s parangelía?̱</item>
+                            <item lang="el" for="name">Ο μέγιστος αριθμός των φορές για να ενημερώσει τον χρήστη του νέου παραγγελία;</item>
                             <item lang="fr" for="name">Le nombre maximum de fois pour avertir l'utilisateur de réapprovisionnement?</item>
                         </translations>
                         <type>input</type>
@@ -145,7 +185,7 @@
                         <name>Send reminder notifications every?</name>
                         <translations>
                             <item lang="es" for="name">Enviar notificaciones de aviso cada?</item>
-                            <item lang="el" for="name">Apostolí̱ eidopoií̱seo̱n ypenthýmisi̱s káthe ?</item>
+                            <item lang="el" for="name">Αποστολή ειδοποιήσεις υπενθύμισης κάθε;</item>
                             <item lang="fr" for="name">Envoyer des notifications de rappel tous les?</item>
                         </translations>
                         <type>selectbox</type>
@@ -155,17 +195,17 @@
                                 <name>1 Week</name>
                                 <translations>
                                     <item lang="es">1 Semana</item>
-                                    <item lang="el">1 evdomáda</item>
+                                    <item lang="el">1 Εβδομάδα</item>
                                     <item lang="fr">1 semaine</item>
-                                </translations>                                
+                                </translations>
                             </item>
                             <item id="2 Weeks">
                                 <name>2 Weeks</name>
                                 <translations>
                                     <item lang="es">2 Semanas</item>
-                                    <item lang="el">2 Evdomádes</item>
+                                    <item lang="el">2 Εβδομάδες</item>
                                     <item lang="fr">2 Semaines</item>
-                                </translations>                                                                
+                                </translations>
                             </item>
                         </variants>
                     </item>
@@ -213,10 +253,10 @@
         <item for="uninstall">DELETE FROM ?:privileges WHERE privilege = 'manage_reminders'</item>
         <item for="uninstall">DELETE FROM ?:language_values WHERE name = 'privileges.manage_reminders'</item>
 
-        <item for="install" lang="en">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('en','privileges.manage_reminders', 'Manage reminders', 'Manage reminders');</item>
-        <item for="install" lang="es">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('es','privileges.manage_reminders', 'Gestione recordatorios', 'Gestione recordatorios');</item>
-        <item for="install" lang="el">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('el','privileges.manage_reminders', 'Diacheiristeíte ypenthymíseis', 'Diacheiristeíte ypenthymíseis');</item>
-        <item for="install" lang="fr">REPLACE INTO ?:language_values (lang_code, name, value, original_value) VALUES ('fr','privileges.manage_reminders', 'Gérer les rappels', 'Gérer les rappels');</item>
+        <item for="install" lang="en">REPLACE INTO ?:language_values (lang_code, name, value) VALUES ('en','privileges.manage_reminders', 'Manage reminders');</item>
+        <item for="install" lang="es">REPLACE INTO ?:language_values (lang_code, name, value) VALUES ('es','privileges.manage_reminders', 'Gestione recordatorios');</item>
+        <item for="install" lang="el">REPLACE INTO ?:language_values (lang_code, name, value) VALUES ('el','privileges.manage_reminders', 'Διαχείριση υπενθυμίσεις');</item>
+        <item for="install" lang="fr">REPLACE INTO ?:language_values (lang_code, name, value) VALUES ('fr','privileges.manage_reminders', 'Gérer les rappels');</item>
     </queries>
     <functions>
         <item for="install">fn_tspror_install_product_fields</item>
