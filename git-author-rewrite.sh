@@ -1,5 +1,8 @@
 #!/bin/sh
  
+git config --global user.email "sharron@thesoftwarepeople.com"
+git config --global user.name "Sharron Denice"
+
 git filter-branch --env-filter '
  
 an="Sharron Denice"
