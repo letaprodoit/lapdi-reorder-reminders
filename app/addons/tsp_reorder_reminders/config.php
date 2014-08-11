@@ -6,7 +6,7 @@
  * @filename	config.php
  * @version		1.1.7
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
- * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
+ * @copyright	Copyright © 2014 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Configuration file for addon
  * 
@@ -18,6 +18,8 @@ use Tygh\Registry;
 
 require_once 'lib/fn.tsp_reorder_reminders.php';
 
+$store_lang = (DEFAULT_LANGUAGE != null) ? DEFAULT_LANGUAGE : CART_LANGUAGE;
+
 Registry::set('tspror_reminder_statuses_long', array(
 		'O' => array(
 			'status_id' 	=> 1,
@@ -25,9 +27,9 @@ Registry::set('tspror_reminder_statuses_long', array(
 			'color_status'	=> 'O',
 			'type' 			=> 'A',
 			'is_default' 	=> 'Y',
-			'description' 	=> __("tspror_open"),
-			'email_subj' 	=> __("tspror_open_email_subj"),
-			'email_header' 	=> __("tspror_open_email_header"),
+			'description' 	=> __("tspror_open", array(), $store_lang),
+			'email_subj' 	=> __("tspror_open_email_subj", array(), $store_lang),
+			'email_header' 	=> __("tspror_open_email_header", array(), $store_lang),
 		),
 		'C' => array(
 			'status_id' 	=> 4,
@@ -35,15 +37,15 @@ Registry::set('tspror_reminder_statuses_long', array(
 			'color_status'	=> 'P',
 			'type' 			=> 'A',
 			'is_default' 	=> 'Y',
-			'description' 	=> __("tspror_completed"),
-			'email_subj' 	=> __("tspror_completed_email_subj"),
-			'email_header' 	=> __("tspror_completed_email_header"),
+			'description' 	=> __("tspror_completed", array(), $store_lang),
+			'email_subj' 	=> __("tspror_completed_email_subj", array(), $store_lang),
+			'email_header' 	=> __("tspror_completed_email_header", array(), $store_lang),
 		),
 ));
 
 Registry::set('tspror_reminder_statuses_short', array(
-		'O' => __("tspror_open"),
-		'C' => __("tspror_completed")
+		'O' => __("tspror_open", array(), $store_lang),
+		'C' => __("tspror_completed", array(), $store_lang)
 ));
 
 Registry::set('tspror_reminder_status_params', array(
@@ -74,13 +76,13 @@ Registry::set('tspror_product_data_field_names', array(
 		'type' => 'S',
 		'default_value_metadata_key' => 'tspror_reminder_default',
 		'options' => array(
-			__("tspror_no_reminder"),
-			'1 '.__("tspror_month"),
-			'2 '.__("tspror_months"),
-			'3 '.__("tspror_months"),
-			'6 '.__("tspror_months"),
-			'9 '.__("tspror_months"),
-			'1 '.__("tspror_year"),
+			__("tspror_no_remind", array(), $store_lang),
+			'1 '.__("tspror_month", array(), $store_lang),
+			'2 '.__("tspror_months", array(), $store_lang),
+			'3 '.__("tspror_months", array(), $store_lang),
+			'6 '.__("tspror_months", array(), $store_lang),
+			'9 '.__("tspror_months", array(), $store_lang),
+			'1 '.__("tspror_year", array(), $store_lang),
 		)
 	),
 ));

@@ -90,26 +90,29 @@ elseif ($mode == 'add')
 
 	foreach ($field_names as $field_name => $fdata)
 	{	
-		$value = "";
-		
-		if (!empty($fdata['options_func']))
+		if ($fdata['admin_only'])
 		{
-			$fdata['options'] = call_user_func($fdata['options_func']);
-		}//endif
-
-		$product_addon_fields[] = array(
-			'title' => __($field_name),
-			'name' => $field_name,
-			'value' => $value,
-			'icon' => $fdata['icon'],
-			'width' => $fdata['width'],
-			'class' => $fdata['class'],
-			'type' => $fdata['type'],
-			'hint' => $fdata['hint'],
-			'options' => $fdata['options'],
-			'readonly' => $fdata['readonly']
-		);
-	
+			$value = "";
+			
+			if (!empty($fdata['options_func']))
+			{
+				$fdata['options'] = call_user_func_array($fdata['options_func'],$fdata['options_func_args']);
+			}//endif
+					
+			$product_addon_fields[] = array(
+					'title' => __($field_name),
+					'name' => $field_name,
+					'value' => $value,
+					'icon' => $fdata['icon'],
+					'width' => $fdata['width'],
+					'class' => $fdata['class'],
+					'type' => $fdata['type'],
+					'hint' => $fdata['hint'],
+					'options' => $fdata['options'],
+					'readonly' => $fdata['readonly']
+			);
+				
+		}	
 	}//endforeach
 	
 	Registry::get('view')->assign('tspror_product_addon_fields', $product_addon_fields);				

@@ -4,9 +4,9 @@
  *
  * @package		TSP Re-Order Reminders for CS-Cart
  * @filename	notifications.post.php
- * @version		1.1.6
+ * @version		1.1.7
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
- * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
+ * @copyright	Copyright © 2014 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Used as a cron to notify users of reminders
  * 
@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 use Tygh\Registry;
 
 $debug = false;
+
+$store_lang = (DEFAULT_LANGUAGE != null) ? DEFAULT_LANGUAGE : CART_LANGUAGE;
 
 if ($mode == 'cron')
 {
@@ -91,7 +93,7 @@ if ($mode == 'cron')
 								// only send if the user has not chosen reminders AND
 								// ((the user has never been reminded AND the time to remind is now) OR
 								// (the next reminder time is now)
-								if ( $remind_in != Registry::get( 'tspror_no_reminder' ) && 
+								if ( $remind_in != __("tspror_no_remind", array(), $store_lang) && 
 									((!$date_reminded && ($date_to_remind == $now)) || ( $next_reminder == $now )))
 								{
 									if ($debug)

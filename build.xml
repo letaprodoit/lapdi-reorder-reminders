@@ -17,7 +17,7 @@
         <include name="${name}/schemas/permissions/*" />
     </fileset>
 
-    <!-- Fileset for backend files -->
+    <!-- Fileset for design backend files -->
     <fileset dir="${project.basedir}/design/backend" id="backend_files">
         <include name="css/addons/${name}/*" />
         <include name="mail/templates/addons/${name}/*" />
@@ -33,10 +33,9 @@
         <include name="templates/addons/${name}/views/reminders/components/*" />
     </fileset>
 
-    <!-- Fileset for frontend files -->
+    <!-- Fileset for design theme files -->
     <fileset dir="${project.basedir}/design/themes" id="frontend_files">
-   </fileset>
-
+    </fileset>
 
     <!-- Fileset for all files -->
     <fileset dir="${project.basedir}" id="allfiles">
@@ -74,7 +73,7 @@
         <copy todir="${test_site}/app/addons">
             <fileset refid="addonfiles" />
         </copy>
-        <echo message="Copying BACKEND files to TEST project..." />
+        <echo message="Copying DESIGN BACKEND files to TEST project..." />
         <copy todir="${test_site}/design/backend">
             <fileset refid="backend_files" />
         </copy>
@@ -84,7 +83,7 @@
         <copy todir="${live_site}/app/addons">
             <fileset refid="addonfiles" />
         </copy>
-        <echo message="Copying BACKEND files to LIVE project..." />
+        <echo message="Copying DESIGN BACKEND files to LIVE project..." />
         <copy todir="${live_site}/design/backend">
             <fileset refid="backend_files" />
         </copy>

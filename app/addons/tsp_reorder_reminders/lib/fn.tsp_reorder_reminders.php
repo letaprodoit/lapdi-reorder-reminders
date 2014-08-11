@@ -6,7 +6,7 @@
  * @filename	fn.tsp_reorder_reminders.php
  * @version		1.1.7
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
- * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
+ * @copyright	Copyright © 2014 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Helper functions for addon
  * 
@@ -29,29 +29,7 @@ use Tygh\Navigation\LastView;
  ***********/
 function fn_tspror_uninstall_languages ()
 {
-	$names = array(
-		'tsp_reorder_reminders',
-		'tspror_details',
-		'tspror_reminders',
-		'tspror_reminders_appointments_menu_description',	
-		'tspror_reminder_comment',
-		'tspror_reminder_completed',
-		'tspror_reminder_created',
-		'tspror_reminder_date',
-		'tspror_reminder_default',
-		'tspror_reminder_expire',
-		'tspror_reminder_in',
-		'tspror_reminder_interval',
-		'tspror_reminder_sent',
-		'tspror_notification',
-		'tspror_notification_msg',
-		'tspror_title',
-	);
-	
-	if (!empty($names)) 
-	{
-		db_query("DELETE FROM ?:language_values WHERE name IN (?a)", $names);
-	}//endif
+	db_query("DELETE FROM ?:language_values WHERE name LIKE 'tspror_%s'");
 }//end fn_tspror_uninstall_languages
 
 /***********
@@ -80,10 +58,10 @@ function fn_tspror_install_product_fields ()
 				db_query("INSERT INTO ?:addon_tsp_reorder_reminders_product_field_metadata (`key`,`option_id`) VALUES ('$option_field_key',$reminder_id)");
 				
 				// Install descriptions
-				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'en', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'en'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
-				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'el', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'el'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
-				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'es', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'es'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
-				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'fr', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'fr'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment'), 'inner_hint' => '', 'incorrect_message' => ''));
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'en', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'en'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment', array(), 'en'), 'inner_hint' => '', 'incorrect_message' => ''));
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'el', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'el'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment', array(), 'el'), 'inner_hint' => '', 'incorrect_message' => ''));
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'es', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'es'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment', array(), 'es'), 'inner_hint' => '', 'incorrect_message' => ''));
+				db_query('INSERT INTO ?:product_options_descriptions ?e', array('lang_code' => 'fr', 'option_id' => $reminder_id, 'option_name' => __('tspror_reminder',array(),'fr'), 'option_text' => '', 'description' => '', 'comment' => __('tspror_reminder_comment', array(), 'fr'), 'inner_hint' => '', 'incorrect_message' => ''));
 				
 				// Install option variants
 				$var1 = db_query('INSERT INTO ?:product_option_variants ?e', array('position' => 0, 'option_id' => $reminder_id, 'modifier' => 0.00));
@@ -105,7 +83,7 @@ function fn_tspror_install_product_fields ()
 				('tspror_product_option_reminder_field_vars',$reminder_id,$var7)");
 				
 				// Install option variant descriptions
-				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var1, 'variant_name' => __("tspror_no_reminder",array(),'en')));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var1, 'variant_name' => __("tspror_no_remind",array(),'en')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var2, 'variant_name' => '1 '.__("tspror_months",array(),'en')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var3, 'variant_name' => '2 '.__("tspror_months",array(),'en')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var4, 'variant_name' => '3 '.__("tspror_months",array(),'en')));
@@ -113,7 +91,7 @@ function fn_tspror_install_product_fields ()
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var6, 'variant_name' => '9 '.__("tspror_months",array(),'en')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'en', 'variant_id' => $var7, 'variant_name' => '1 '.__("tspror_year",array(),'en')));
 				
-				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var1, 'variant_name' => __("tspror_no_reminder",array(),'el')));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var1, 'variant_name' => __("tspror_no_remind",array(),'el')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var2, 'variant_name' => '1 '.__("tspror_months",array(),'el')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var3, 'variant_name' => '2 '.__("tspror_months",array(),'el')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var4, 'variant_name' => '3 '.__("tspror_months",array(),'el')));
@@ -121,7 +99,7 @@ function fn_tspror_install_product_fields ()
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var6, 'variant_name' => '9 '.__("tspror_months",array(),'el')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'el', 'variant_id' => $var7, 'variant_name' => '1 '.__("tspror_year",array(),'el')));
 
-				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var1, 'variant_name' => __("tspror_no_reminder",array(),'es')));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var1, 'variant_name' => __("tspror_no_remind",array(),'es')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var2, 'variant_name' => '1 '.__("tspror_months",array(),'es')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var3, 'variant_name' => '2 '.__("tspror_months",array(),'es')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var4, 'variant_name' => '3 '.__("tspror_months",array(),'es')));
@@ -129,7 +107,7 @@ function fn_tspror_install_product_fields ()
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var6, 'variant_name' => '9 '.__("tspror_months",array(),'es')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'es', 'variant_id' => $var7, 'variant_name' => '1 '.__("tspror_year",array(),'es')));
 
-				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var1, 'variant_name' => __("tspror_no_reminder",array(),'fr')));
+				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var1, 'variant_name' => __("tspror_no_remind",array(),'fr')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var2, 'variant_name' => '1 '.__("tspror_months",array(),'fr')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var3, 'variant_name' => '2 '.__("tspror_months",array(),'fr')));
 				db_query('INSERT INTO ?:product_option_variants_descriptions ?e', array('lang_code' => 'fr', 'variant_id' => $var4, 'variant_name' => '3 '.__("tspror_months",array(),'fr')));
@@ -299,15 +277,16 @@ function fn_tspror_delete_reminder($id)
  */
 function fn_tspror_get_option_variants( $option_id )
 {
+	$store_lang = (DEFAULT_LANGUAGE != null) ? DEFAULT_LANGUAGE : CART_LANGUAGE;
 	$variants = array();
 	
-	$variant_ids = db_get_fields('SELECT `variant_id` FROM ?:product_option_variants WHERE `option_id` = ?i', $option_id);
+	$variant_ids = db_get_fields('SELECT `variant_id` FROM ?:addon_tsp_reorder_reminders_product_field_metadata WHERE `option_id` = ?i AND `key` = ?s', $option_id, 'tspror_product_option_reminder_field_vars');
 	
 	if ( !empty( $variant_ids ) )
 	{
 		foreach ( $variant_ids as $variant_id )
 		{
-			$variants[] = db_get_field('SELECT `variant_name` FROM ?:product_option_variants_descriptions WHERE `variant_id` = ?i', $variant_id);
+			$variants[] = db_get_field('SELECT `variant_name` FROM ?:product_option_variants_descriptions WHERE `variant_id` = ?i AND `lang_code` = ?s', $variant_id, $store_lang);
 		}//end foreach
 	}//end if
 	

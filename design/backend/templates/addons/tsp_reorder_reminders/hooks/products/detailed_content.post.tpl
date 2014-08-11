@@ -1,2 +1,2 @@
-{include file="common/subheader.tpl" title=__("tsp_reorder_reminders") target="#tsp_reorder_reminders_fields"}
+{include file="common/subheader.tpl" title=__("tspror_reorder_reminders") target="#tsp_reorder_reminders_fields"}
 {include file="addons/tsp_reorder_reminders/views/reminders/components/update_fields.tpl" target_name="tsp_reorder_reminders_fields"  field_id_prefix="" type="product" array_name="product_data" record=$product_data fields=$tspror_product_addon_fields}

@@ -17,7 +17,7 @@
         <item lang="fr" for="description">Les logiciels personnes (TSP) Réorganiser rappels pour CS-Cart permet aux utilisateurs d'être rappelé quand il est temps de re-commander un produit. Pour plus de détails visitez notre site Internet www.thesoftwarepeople.com</item>
     </translations>
     <language_variables>
-        <item lang="en" id="tsp_reorder_reminders">The Software People: Re-Order Reminders</item>
+        <item lang="en" id="tspror_reorder_reminders">The Software People: Re-Order Reminders</item>
         <item lang="en" id="tspror_details">Reminder Details</item>
         <item lang="en" id="tspror_reminders">Re-Order Reminders</item>
         <item lang="en" id="tspror_reminders_menu_description">List of reorder reminders requested by your customers.</item>
@@ -48,28 +48,28 @@
         <item lang="en" id="tspror_months">Months</item>
         <item lang="en" id="tspror_year">Year</item>
 
-		<item lang="el" id="tsp_reorder_reminders">Το λογισμικό Άνθρωποι: Re-Order Υπενθυμίσεις</item>
+		<item lang="el" id="tspror_reorder_reminders">Για να λογισμικό Άνθρωποι: Νέα σειρά Υπενθυμίσεις</item>
         <item lang="el" id="tspror_details">Υπενθύμιση Λεπτομέρειες</item>
-        <item lang="el" id="tspror_reminders">Re-Order Υπενθυμίσεις</item>
+        <item lang="el" id="tspror_reminders">Νέα σειρά Υπενθυμίσεις</item>
         <item lang="el" id="tspror_reminders_menu_description">λίστα των υπενθυμίσεων αναπαραγγελίας αίτηση από τους πελάτες σας.</item>
-        <item lang="el" id="tspror_reminder">Υπενθύμιση για Re-Order Σε;</item>
+        <item lang="el" id="tspror_reminder">Υπενθύμιση για Νέα σειρά Σε;</item>
         <item lang="el" id="tspror_reminder_comment">Πότε θα επιθυμούσατε να κοινοποιημένοι δύο re-παραγγελία;</item>
         <item lang="el" id="tspror_reminder_completed">Ολοκληρώθηκε</item>
         <item lang="el" id="tspror_reminder_created">Δημιουργήθηκε την</item>
-        <item lang="el" id="tspror_reminder_date">Υπενθυμίζεται On</item>
-        <item lang="el" id="tspror_reminder_default">Default Υπενθύμιση Επιλογή</item>
+        <item lang="el" id="tspror_reminder_date">Υπενθυμίζεται Σχετικά με</item>
+        <item lang="el" id="tspror_reminder_default">Προεπιλογή Υπενθύμιση Επιλογή</item>
         <item lang="el" id="tspror_reminder_editing">Επεξεργασία Υπενθύμιση</item>
         <item lang="el" id="tspror_reminder_expire">Ο μέγιστος αριθμός των φορές δύο ειδοποιεί το χρήστη του νέου παραγγελία;</item>
         <item lang="el" id="tspror_reminder_in">Υπενθύμιση Σε</item>
         <item lang="el" id="tspror_reminder_interval">στείλει ειδοποιήσεις υπενθύμισης κάθε φορά;</item>
-        <item lang="el" id="tspror_reminder_reordered">αναδιατάσσονται On</item>
-        <item lang="el" id="tspror_reminder_sent">Σύνολο Sent</item>
+        <item lang="el" id="tspror_reminder_reordered">αναδιατάσσονται Σχετικά με</item>
+        <item lang="el" id="tspror_reminder_sent">Σύνολο Εστάλη</item>
         <item lang="el" id="tspror_reminder_status">Υπενθύμιση Κατάσταση</item>
-        <item lang="el" id="tspror_notification">Γνωστοποίηση Re-Order για [product_name]</item>
+        <item lang="el" id="tspror_notification">Γνωστοποίηση Νέα σειρά για [product_name]</item>
         <item lang="el" id="tspror_notification_msg">Σύμφωνα με το αίτημά σας, είμαστε πλη μινγκ σας det er τώρα [reminder_interval] από την τελευταία παραγγελία σας και είναι πλέον καιρός να αλλάξετε τη σειρά [product_name]. Για την εκ νέου-για αυτό το item επίσκεψη Παραγγελία # [order_url] και κάντε κλικ στο "[reorder_this_order]»</item>
-        <item lang="el" id="tspror_title">Re-Order Υπενθυμίσεις</item>
+        <item lang="el" id="tspror_title">Νέα σειρά Υπενθυμίσεις</item>
 		<item lang="el" id="tspror_no_remind">Δεν Υπενθυμίσεις</item>
-        <item lang="el" id="tspror_open">Open</item>
+        <item lang="el" id="tspror_open">Ανοικτή</item>
         <item lang="el" id="tspror_open_email_subj">έχει δημιουργηθεί</item>
         <item lang="el" id="tspror_open_email_header">υπενθύμιση σας έχει δημιουργηθεί με επιτυχία.</item>
         <item lang="el" id="tspror_completed">Ολοκληρώθηκε</item>
@@ -79,7 +79,7 @@
         <item lang="el" id="tspror_months">Μήνες</item>
         <item lang="el" id="tspror_year">Έτος</item>
 		
-        <item lang="es" id="tsp_reorder_reminders">Los Software Personas : Reordenar Recordatorios</item>
+        <item lang="es" id="tspror_reorder_reminders">Los Software Personas : Reordenar Recordatorios</item>
         <item lang="es" id="tspror_details">detalles del recordatorio</item>
         <item lang="es" id="tspror_reminders">Reordenar Recordatorios</item>
         <item lang="es" id="tspror_reminders_menu_description">Lista de recordatorios de referencia de los solicitados por sus clientes.</item>
@@ -110,7 +110,7 @@
         <item lang="es" id="tspror_months">Meses</item>
         <item lang="es" id="tspror_year">Año</item>
 		
-        <item lang="fr" id="tsp_reorder_reminders">Les logiciels de personnes: Réorganiser les rappels</item>
+        <item lang="fr" id="tspror_reorder_reminders">Les logiciels de personnes: Réorganiser les rappels</item>
         <item lang="fr" id="tspror_details">Détails de rappel</item>
         <item lang="fr" id="tspror_reminders">Réorganiser rappels</item>
         <item lang="fr" id="tspror_reminders_menu_description">Liste des rappels de réapprovisionnement demandées par vos clients .</item>
