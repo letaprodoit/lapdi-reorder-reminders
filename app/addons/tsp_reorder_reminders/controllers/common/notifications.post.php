@@ -113,12 +113,14 @@ if ($mode == 'cron')
 									{
 										$reminder_count = (int)$reminders_sent + 1;
 										$status = 'O';
+										$date_completed = 0;
 										
 										// if the max number of times a reminder can be sent is reached
 										// close this reminder by setting its status to C
 										if ( $reminder_count >= (int)$max_reminders )
 										{
 											$status = 'C';
+											$date_completed = $now_timestamp;
 										}//end if
 										
 										// Update the reminder record
@@ -126,7 +128,7 @@ if ($mode == 'cron')
 											'status'			=> $status,
 											'reminders_sent' 	=> $reminder_count,
 											'date_reminded' 	=> $now_timestamp,
-											'date_completed'	=> $now_timestamp,
+											'date_completed'	=> $date_completed,
 										);
 										
 										db_query( "UPDATE ?:addon_tsp_reorder_reminders SET ?u WHERE `id` = ?i", $data, $reminder_id );
