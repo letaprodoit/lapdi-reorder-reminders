@@ -171,6 +171,24 @@
                             </item>
                         </variants>
                     </item>
+                    <item id="bcc_staff">
+                        <name>BCC Staff When Sending Reminders</name>
+                        <translations>
+                            <item lang="es" for="name">BCC Personal Al enviar recordatorios</item>
+                            <item lang="el" for="name">BCC Προσωπικού κατά την αποστολή υπενθυμίσεων</item>
+                            <item lang="fr" for="name">BCC Le personnel lors de l'envoi des rappels</item>
+                        </translations>
+                        <type>selectbox</type>
+                        <default_value>N</default_value>
+                        <variants>
+                            <item id="N">
+                                <name>No</name>
+                            </item>
+                            <item id="Y">
+                                <name>Yes</name>
+                            </item>
+                        </variants>
+                    </item>
                     <item id="max_reminders">
                         <name>The maximum number of times to notify the user of re-order?</name>
                         <translations>

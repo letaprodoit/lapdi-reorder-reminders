@@ -108,8 +108,15 @@ if ($mode == 'cron')
 									
 									$mail_data = array();
 									$mail_data['reminder_interval'] =  $remind_user_in;
-
-									if ( fn_tspror_notify_user( $reminder_id, false, $mail_data ) )
+										
+									$bcc_staff = false;
+									
+									if (Registry::get('addons.tsp_reorder_reminders.bcc_staff') == 'Y')
+									{
+										$bcc_staff = true;	
+									}
+										
+									if ( fn_tspror_notify_user( $reminder_id, $bcc_staff, $mail_data ) )
 									{
 										$reminder_count = (int)$reminders_sent + 1;
 										$status = 'O';
