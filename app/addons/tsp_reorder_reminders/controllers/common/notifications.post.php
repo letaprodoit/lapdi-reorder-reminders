@@ -41,7 +41,7 @@ if ($mode == 'cron')
 	
 	$now_timestamp = time();
 	$now = fn_date_format($now_timestamp, Registry::get('settings.Appearance.date_format'));
-
+		
 	foreach ( $active_reminders as $id => $reminder )
 	{
 		extract($reminder);
@@ -86,14 +86,14 @@ if ($mode == 'cron')
 								$next_reminder_timestamp = strtotime($time_between_reminders, $last_reminder_timestamp);
 								$next_reminder = fn_date_format($next_reminder_timestamp, Registry::get('settings.Appearance.date_format'));
 								
-								list($null, $remind_user_in) = fn_tspror_get_product_option_info($option_id,$value);
+								list($null, $remind_user_in) = fn_tspror_get_product_option_info($option_id,$value);								
 								$date_to_remind_timestamp = strtotime($remind_user_in, $reminder_created_timestamp);
 								$date_to_remind = fn_date_format($date_to_remind_timestamp, Registry::get('settings.Appearance.date_format'));
 
-								// only send if the user has not chosen reminders AND
+								// only send if the user has chosen reminders AND
 								// ((the user has never been reminded AND the time to remind is now) OR
 								// (the next reminder time is now)
-								if ( $remind_in != __("tspror_no_remind", array(), $store_lang) && 
+								if ( $remind_user_in != __("tspror_no_remind", array(), $store_lang) && 
 									((!$date_reminded && ($date_to_remind == $now)) || ( $next_reminder == $now )))
 								{
 									if ($debug)

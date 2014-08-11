@@ -398,6 +398,8 @@ function fn_tspror_get_product_field_id($key)
  ***********/
 function fn_tspror_get_product_option_info($option_id, $option_value, $value_only = false) 
 {
+	$store_lang = (DEFAULT_LANGUAGE != null) ? DEFAULT_LANGUAGE : CART_LANGUAGE;
+	
 	$desc = db_get_field("SELECT `option_name` FROM ?:product_options_descriptions WHERE `option_id` = ?i", $option_id);
 	$val = $option_value;
 	
@@ -405,7 +407,7 @@ function fn_tspror_get_product_option_info($option_id, $option_value, $value_onl
 
 	if ($option_type == 'S' && !$value_only)
 	{
-		$val = db_get_field("SELECT opt_desc.variant_name FROM ?:product_option_variants_descriptions AS opt_desc LEFT JOIN ?:product_option_variants AS opt_var ON opt_desc.variant_id = opt_var.variant_id WHERE opt_var.option_id = ?i AND opt_var.variant_id = ?i", $option_id,$option_value);
+		$val = db_get_field("SELECT opt_desc.variant_name FROM ?:product_option_variants_descriptions AS opt_desc LEFT JOIN ?:product_option_variants AS opt_var ON opt_desc.variant_id = opt_var.variant_id WHERE opt_var.option_id = ?i AND opt_var.variant_id = ?i AND opt_desc.lang_code = ?s", $option_id,$option_value,$store_lang);
 	}//endif
 
 	return array($desc,$val);

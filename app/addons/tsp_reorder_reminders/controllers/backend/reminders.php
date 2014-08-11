@@ -4,9 +4,9 @@
  *
  * @package		TSP Re-Order Reminders for CS-Cart
  * @filename	reminders.php
- * @version		1.0.1
+ * @version		1.1.7
  * @author		Sharron Denice, The Software People, LLC on 2013/02/09
- * @copyright	Copyright © 2013 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
+ * @copyright	Copyright © 2014 The Software People, LLC (www.thesoftwarepeople.com). All rights reserved
  * @license		Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  * @brief		Reminders dispatch for addon
  * 
